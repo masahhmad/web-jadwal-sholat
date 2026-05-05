@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat Fardhumu</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/mosquewehh.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Jadwal Sholat Fardhu</h1>
+        </header>
+
+        <section class="selector-row">
+            <label for="city-select">Pilih Kota :</label>
+            <select id="city-select">
+                <option value="" disabled selected>Memuat kota...</option>
+            </select>
+            <button id="view-schedule-btn" disabled>Lihat Jadwal</button>
+        </section>
+
+        <section id="verse-section" class="verse-section">
+            <div class="divider">——— ○ ○ ○ ———</div>
+            <p class="arabic-verse">حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَى وَقُومُوا لِلَّهِ قَانِتِينَ</p>
+            <p class="translation-verse">"Peliharalah semua salat (fardu) dan salat Wusṭā. Berdirilah karena Allah (dalam salat) dengan khusyuk."</p>
+        </section>
+
+        <section id="prayer-cards-section" class="prayer-cards-section hidden">
+            <div id="prayer-cards-container"></div>
+        </section>
+
+        <footer class="footer">
+            <p><a href="https://masahhmad.com/" target="_blank">masahhmad.com</a></p>
+            <p>copyright © 2024 Ahmad Abdilah</p>
+            <p>All right reserved.</p>
+        </footer>
+    </div>
+
+    <img rel="preload" src="./images/mosquewehh.png" alt="Mosque Illustration" class="mosque-illustration">
+
+    <script src="script.js"></script>
+</body>
+</html>

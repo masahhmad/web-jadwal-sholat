@@ -1,0 +1,248 @@
+:root {
+    --bg-color: #CFFAFA;
+    --title-color: #6B5E00;
+    --button-bg: #F5E03A;
+    --button-text: #000000;
+    --card-bg: #FFFFFF;
+    --footer-text: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--title-color);
+}
+
+.selector-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.selector-row label {
+    font-size: 1rem;
+    color: var(--title-color);
+    font-weight: 500;
+}
+
+.selector-row select {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: 2px solid var(--title-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: #333;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+.selector-row select:focus {
+    outline: none;
+    border-color: var(--button-bg);
+}
+
+.selector-row button {
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.selector-row button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.selector-row button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.verse-section {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.divider {
+    color: var(--title-color);
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+.arabic-verse {
+    font-family: 'Traditional Arabic', 'Times New Roman', serif;
+    font-size: 1.6rem;
+    direction: rtl;
+    color: var(--title-color);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.translation-verse {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--title-color);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.prayer-cards-section {
+    padding: 20px 0;
+}
+
+.prayer-cards-section.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.prayer-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prayer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.prayer-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.prayer-time {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #c0392b;
+    background-color: #fadbd8;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: var(--footer-text);
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: var(--title-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 4px 0;
+}
+
+.mosque-illustration {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 420px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 16px 50px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .selector-row {
+        flex-direction: column;
+    }
+
+    .selector-row label {
+        text-align: center;
+    }
+
+    .selector-row select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .selector-row button {
+        width: 100%;
+    }
+
+    .arabic-verse {
+        font-size: 1.3rem;
+    }
+
+    .translation-verse {
+        font-size: 0.9rem;
+    }
+
+    .mosque-illustration {
+        display: none;
+    }
+}
